@@ -3,9 +3,6 @@
 #include <string.h>
 
 
-#include <stdio.h>
-#include <string.h>
-
 // Remove acentos e caracteres especiais de uma string UTF-8
 void removerAcentos(char *str) {
     if (str == NULL) return;
@@ -111,7 +108,7 @@ int main()
     char lon[20] = "";
     char comando_geo[512];
     char comando_weather[512];
-    const char *api_key = "936f211b79c103221fa819509c2281b7"; // Substitua pela sua chave real
+    const char *api_key = "SUA CHAVE"; // Substitua pela sua chave real
 
     printf("Digite o nome da cidade: ");
     fgets(cidade, sizeof(cidade), stdin);
