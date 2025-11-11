@@ -117,10 +117,8 @@ int main()
     fgets(cidade, sizeof(cidade), stdin);
     cidade[strcspn(cidade, "\n")] = '\0'; 
     
-    remover_acentos(cidade);
-    printf("%s  %d\n", cidade, cidade[4]);
+    removerAcentos(cidade);
     codificar_url(cidade); 
-    printf("%s", cidade);
     snprintf(comando_geo, sizeof(comando_geo),
              "curl -s \"https://api.openweathermap.org/geo/1.0/direct?q=%s&limit=1&appid=%s\" -o geo.json",
              cidade, api_key);
